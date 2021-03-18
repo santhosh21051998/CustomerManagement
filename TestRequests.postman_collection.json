@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "cd93e9a1-f0f5-4340-8eea-5b266e160b1f",
+		"name": "TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"siva\",\n\t\"phone\":\"1234567890\",\n\t\"address\":\"Dindigul\",\n\t\"owner_id\":\"1\",\n\t\"created_by\":\"Barber_Praveen\",\n    \"updated_by\":\"Barber_Praveen\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/createcustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCustomerBill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"barber_customer_id\":\"1\",\n\t\"service\":\"hair cut\",\n\t\"service_description\":\"hair cut on head and beard \",\n\t\"total_amount\":\"400\",\n\t\"owner_id\":\"1\",\n\t\"created_by\":\"Barber_Praveen\",\n    \"updated_by\":\"Barber_Praveen\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/createcustomerbill",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createcustomerbill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"barber_customer_id\":\"null\",\n\t\"name\":\"santhosh\",\n\t\"phone\":\"null\",\n\t\"address\":\"null\",\n    \"owner_id\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/getcustomer?",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getcustomer"
+					],
+					"query": [
+						{
+							"key": "customer_id ",
+							"value": " 1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomerBill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"barber_customer_id\":\"1\",\n\t\"service\":\"null\",\n\t\"service_description\":\"null\",\n\t\"total_amount\":\"null\",\n\t\"owner_id\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/getcustomerbill",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getcustomerbill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"barber_customer_id\":\"3\",\n\t\"name\":\"Arun\",\n\t\"phone\":\"8909875654\",\n\t\"address\":\"nellur\",\n\t\"owner_id\":\"1\",\n\t\"created_by\":\"Barber_Praveen\",\n    \"updated_by\":\"Barber_Praveen\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/updatecustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updatecustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomerBill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"barber_customer_bill_id\": 1,\n        \"service\": \"spaw\",\n        \"service_description\": \"getting body massage\",\n        \"total_amount\": \"500\",\n        \"owner_id\":\"1\",\n    \t\"created_by\":\"Barber_Praveen\",\n         \"updated_by\":\"Barber_Praveen\"\n    }"
+				},
+				"url": {
+					"raw": "localhost:5000/updatecustomerbill",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updatecustomerbill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"barber_customer_id\":\"2\",\n    \"owner_id\":\"1\",\n\t\"created_by\":\"Barber_Praveen\",\n    \"updated_by\":\"Barber_Praveen\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/deletecustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deletecustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomerBill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"barber_customer_bill_id\":\"3\",\n    \"barber_customer_id\":\"1\",\n    \"owner_id\":\"1\",\n\t\"created_by\":\"Barber_Praveen\",\n    \"updated_by\":\"Barber_Praveen\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/deletecustomerbill",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deletecustomerbill"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
